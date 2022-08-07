@@ -67,10 +67,6 @@ const Item = styled.div`
     }
 `
 
-/* const Hr = styled.hr`
-    margin: 15px 0px;
-    border: 0.5px solid ${({ theme }) => theme.soft};
-` */
 const Login = styled.div``
 const Button = styled.button`
     padding:5px 15px;

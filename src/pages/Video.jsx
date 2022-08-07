@@ -63,12 +63,6 @@ gap:5px;
 cursor:pointer;
 `;
 
-/* const Hr = styled.hr`
-    margin: 15px 0px;
-    border: 0.5px solid ${({ theme }) => theme.soft};
-
-    `; */
-
 const Channel = styled.div`
     display: flex;
     justify-content: space-between;
@@ -82,12 +76,14 @@ display: flex;
 gap: 20px;
 `;
 const Image = styled.img`
-width: 65px;
+    flex:1;
+    width: 50px;
     height: 50px;
     margin: 10px 20px;
     border-radius:50%;
 `;
 const ChannelDetail = styled.div`
+flex:12;
 display: flex;
 flex-direction:column;
 color:${({ theme }) => theme.text};
