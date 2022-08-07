@@ -17,18 +17,22 @@ const Main = styled.div`
   background-color:${({ theme }) => theme.bg};
 `
 const Wrapper = styled.div`
-padding: 22px 96px;`
+padding: 22px;
+@media screen and (max-width:810px) {
+  padding: 10px;
+}
+`
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
-
+  const [burger, setBurger] = useState(false);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Container>
         <BrowserRouter>
-          <Menu darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Menu burger={burger} darkMode={darkMode} setDarkMode={setDarkMode} />
           <Main>
-            <Navbar />
+            <Navbar burger={burger} setBurger={setBurger} />
             <Wrapper>
               <Routes>
                 <Route path="/">
@@ -42,7 +46,7 @@ const App = () => {
             </Wrapper>
           </Main>
         </BrowserRouter>
-      </Container>;
+      </Container>
     </ThemeProvider>
   )
 };

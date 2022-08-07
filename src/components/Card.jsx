@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Container = styled.div`
-width:${({ type }) => type !== "sm" && "360px"};
+min-width:${({ type }) => type !== "sm" && "360px"};
 margin-bottom:${({ type }) => type === "sm" ? "10px" : "45px"};
 display:${({ type }) => type === "sm" && "flex"};
 gap:10px;

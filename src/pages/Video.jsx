@@ -17,7 +17,8 @@ flex:5;
 `;
 
 const VideoWrapper = styled.div`
-
+height:50vh;
+width:100%;
 `;
 
 const Title = styled.h1`
@@ -26,18 +27,29 @@ const Title = styled.h1`
     margin-top: 20px;
     margin-bottom:10px;
     color: ${({ theme }) => theme.text};
+
+    @media screen and (max-width:810px){
+        margin-left: 20px;
+    }
 `;
 
 const Detailes = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width:810px){
+        margin: 10px;
+        gap:10px;
+        flex-direction:column;
+    }
 `;
 const Info = styled.span`
     color:${({ theme }) => theme.textSoft};
 `;
 const Buttons = styled.div`
 display: flex;
+flex-wrap: wrap;
 gap:20px;
 color:${({ theme }) => theme.text};
 
@@ -51,14 +63,19 @@ cursor:pointer;
 `;
 
 const Hr = styled.hr`
-margin: 15px 0px;
+    margin: 15px 0px;
     border: 0.5px solid ${({ theme }) => theme.soft};
-`;
+
+    `;
 
 const Channel = styled.div`
     display: flex;
     justify-content: space-between;
-`;
+    
+    @media screen and (max-width:810px){
+        margin-left: 20px;
+    }
+    `;
 const ChannelInfo = styled.div`
 display: flex;
 gap: 20px;
@@ -98,13 +115,17 @@ cursor:pointer;
 
 const Recommendation = styled.div`
 flex:2;
+
+@media screen and (max-width:1000px) {
+    display:none;
+}
 `;
 const Video = () => {
     return (
         <Container>
             <Content>
                 <VideoWrapper>
-                    <iframe width="100%" height="720" src='https://www.youtube.com/embed/k3Vfj-e1Ma4' title="Youtube Video Player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gryroscope; picture-in-picture" allowFullScreen ></iframe>
+                    <iframe width="100%" height="100%" src='https://www.youtube.com/embed/k3Vfj-e1Ma4' title="Youtube Video Player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gryroscope; picture-in-picture" allowFullScreen ></iframe>
                 </VideoWrapper>
                 <Title>Test Video</Title>
                 <Detailes>

@@ -1,6 +1,7 @@
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import React from 'react'
+import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -8,6 +9,7 @@ position:sticky;
 top:0;
 background-color: ${({ theme }) => theme.bgLighter};
 height:56px;
+
 `;
 
 const Wrapper = styled.div`
@@ -50,18 +52,44 @@ align-items: center;
 gap:5px;
 `;
 
-const Navbar = () => {
+const BurgerMenu = styled.div`
+ display:none;
+@media screen and (max-width:810px) {
+   display:flex;
+flex-direction:column;
+align-items: center;
+justify-content: center;
+gap:5px;
+cursor: pointer;
+
+}
+`;
+const MenuLine = styled.div`
+width:30px;
+border:3px solid ${({ theme }) => theme.text};
+color:${({ theme }) => theme.text};
+`;
+
+const Navbar = ({ burger, setBurger }) => {
+
     return (
         <Container>
             <Wrapper>
+                <BurgerMenu onClick={() => setBurger(!burger)}>
+                    <MenuLine></MenuLine>
+                    <MenuLine></MenuLine>
+                    <MenuLine></MenuLine>
+                </BurgerMenu>
                 <Search>
                     <Input placeholder="Search" />
                     <SearchOutlinedIcon />
                 </Search>
-                <Button>
-                    <AccountCircleOutlinedIcon />
-                    SIGN IN
-                </Button>
+                <Link to="signin" style={{ textDecoration: "none" }}>
+                    <Button>
+                        <AccountCircleOutlinedIcon />
+                        SIGN IN
+                    </Button>
+                </Link>
             </Wrapper>
         </Container>
     )

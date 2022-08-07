@@ -20,13 +20,22 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-    flex:1;
+    width:250px;
     background-color:${({ theme }) => theme.bgLighter};
-    height: 100vh;
+    height: max-content;
     color:${({ theme }) => theme.text};
     font-size: 14px;
     position:sticky;
     top:0;
+
+    @media screen and (max-width:811px) {
+        position:absolute;
+        transition: all 0.5s ease;
+        left:${({ burger }) => burger ? "0px" : "-235px"};
+        &:hover{           
+            left:0px;
+        }
+}
 `
 
 const Wrapper = styled.div`
@@ -79,10 +88,10 @@ const Title = styled.h2`
   color: #aaaaaa;
   margin-bottom: 20px;
 `;
-const Menu = ({ darkMode, setDarkMode }) => {
+const Menu = ({ burger, darkMode, setDarkMode }) => {
 
     return (
-        <Container>
+        <Container burger={burger} >
             <Wrapper>
                 <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
                     <Logo>
