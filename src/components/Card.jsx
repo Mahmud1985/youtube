@@ -51,7 +51,7 @@ const Card = ({ type }) => {
     return (
         <Container type={type}>
             <Link to="/video/test">
-                <Image type={type} src="https://img.youtube.com/vi/n4R2E7O-Ngo/hqdefault.jpg" />
+                <Image type={type} src="https://img.youtube.com/vi/w3jLJU7DT5E/mqdefault.jpg" />
             </Link>
             <Details type={type}>
                 <ChannelImage type={type} src="https://mkdev-rouge.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmain_img.588d87b7.png&w=1920&q=75" />

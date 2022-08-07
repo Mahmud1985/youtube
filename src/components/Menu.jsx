@@ -29,6 +29,8 @@ const Container = styled.div`
     top:0;
 
     @media screen and (max-width:811px) {
+        // because of position sticky did not support negative value so here used position absolute.
+        // instead of position sticky and left:${({ burger }) => burger ? "0px" : "-235px"};
         position:absolute;
         transition: all 0.5s ease;
         left:${({ burger }) => burger ? "0px" : "-235px"};
