@@ -125,7 +125,7 @@ const Video = () => {
         <Container>
             <Content>
                 <VideoWrapper>
-                    <iframe width="100%" height="100%" src='https://youtu.be/w3jLJU7DT5E' title="Youtube Video Player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gryroscope; picture-in-picture" allowFullScreen ></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w3jLJU7DT5E" title="What is GitHub?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </VideoWrapper>
                 <Title>Test Video</Title>
                 <Detailes>
