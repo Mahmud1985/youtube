@@ -81,8 +81,9 @@ display: flex;
 gap: 20px;
 `;
 const Image = styled.img`
-width: 50px;
+width: 65px;
     height: 50px;
+    margin: 10px 20px;
     border-radius:50%;
 `;
 const ChannelDetail = styled.div`
