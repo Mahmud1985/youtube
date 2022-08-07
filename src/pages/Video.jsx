@@ -6,6 +6,7 @@ import React from 'react'
 import styled from 'styled-components';
 import Comments from '../components/Comments';
 import Card from '../components/Card';
+import Hr from '../components/widgets/Hr';
 
 const Container = styled.div`
 display:flex;
@@ -62,11 +63,11 @@ gap:5px;
 cursor:pointer;
 `;
 
-const Hr = styled.hr`
+/* const Hr = styled.hr`
     margin: 15px 0px;
     border: 0.5px solid ${({ theme }) => theme.soft};
 
-    `;
+    `; */
 
 const Channel = styled.div`
     display: flex;

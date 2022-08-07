@@ -18,6 +18,7 @@ import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import { Link } from "react-router-dom";
+import Hr from './widgets/Hr';
 
 const Container = styled.div`
     width:250px;
@@ -66,10 +67,10 @@ const Item = styled.div`
     }
 `
 
-const Hr = styled.hr`
+/* const Hr = styled.hr`
     margin: 15px 0px;
     border: 0.5px solid ${({ theme }) => theme.soft};
-`
+` */
 const Login = styled.div``
 const Button = styled.button`
     padding:5px 15px;

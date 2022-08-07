@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
@@ -68,32 +68,32 @@ const Hr = styled.hr`
     border: 2.5px solid ${({ theme }) => theme.soft};
 `
 const SignIn = () => {
-    return (
-        <Container>
-            <Wrapper>
-                <Title>Sign In</Title>
-                <SubTitle>Please Sign In to Continue</SubTitle>
-                <Input placeholder='username' />
-                <Input type="password" placeholder='password' />
-                <Button>Sign In</Button>
-                <Hr width='100%' />
-                <Title>Or</Title>
-                <SubTitle>Please Sign Up</SubTitle>
-                <Input placeholder='username' />
-                <Input type="email" placeholder='email' />
-                <Input type="password" placeholder='password' />
-                <Button>Sign In</Button>
-            </Wrapper>
-            <More>
-                English(USA)
-                <Links>
-                    <Link>Help</Link>
-                    <Link>Privacy</Link>
-                    <Link>Terms</Link>
-                </Links>
-            </More>
-        </Container>
-    )
+  return (
+    <Container>
+      <Wrapper>
+        <Title>Sign In</Title>
+        <SubTitle>Please Sign In to Continue</SubTitle>
+        <Input placeholder='username' />
+        <Input type="password" placeholder='password' />
+        <Button>Sign In</Button>
+        <Hr width='100%' />
+        <Title>Or</Title>
+        <SubTitle>Please Sign Up</SubTitle>
+        <Input placeholder='username' />
+        <Input type="email" placeholder='email' />
+        <Input type="password" placeholder='password' />
+        <Button>Sign In</Button>
+      </Wrapper>
+      <More>
+        English(USA)
+        <Links>
+          <Link>Help</Link>
+          <Link>Privacy</Link>
+          <Link>Terms</Link>
+        </Links>
+      </More>
+    </Container>
+  )
 }
 
 export default SignIn
